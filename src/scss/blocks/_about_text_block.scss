@@ -1,0 +1,109 @@
+.about_text_block{
+    padding: 0 40px;
+    background: linear-gradient(270.81deg, #A699F5 -35.19%, rgba(166, 153, 245, 0) 57.62%);
+    position: relative;
+    @include responsive(sm){
+        padding: 0 20px;
+        background: linear-gradient(300deg, #a699f599 18.81%, rgba(166, 153, 245, 0) 47.62%);
+    }
+    .container{
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 20px 0;
+        @include responsive(sm){
+            padding: 50px 0;
+        }
+        .content-wrap{
+            &:before {
+                content: "";
+                width: 370px;
+                height: 90px;
+                position: absolute;
+                background: linear-gradient(90deg, #A699F5 -35.19%, rgba(166, 153, 245, 0) 57.62%);
+                left: 0;
+                top: 0;
+                @include responsive(sm){
+                  top: 35px;
+                }
+            }
+            .heading{
+                font-family: $libre;
+                font-weight: bold;
+                font-size: 40px;
+                color: $black;
+                position: relative;
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                @include responsive(md){
+                    font-size: 32px;
+                }
+                @include responsive(sm){
+                    font-size: 30px;
+                    display: inline;
+                    line-height: 100%;
+                }
+                span{
+                    color: $purple;
+                    margin-left: 5px;
+                    font-size: 70px;
+                    margin-top: -27px;
+                }
+                .line{
+                    height: 2px;
+                    width: calc(calc(100% - 473.24px ) - calc(25% - 1px));
+                    background: black;
+                    margin-top: 10px;
+                    @include responsive(md){
+                        width: calc(calc(100% - 382.18px ) - calc(25% - 1px));
+                    }
+                    @include responsive(sm){
+                        display: none;
+                    }
+                }
+                &:after{
+                    top: 100%;
+                    position: absolute;
+                    content: '';
+                    background: url('/wp-content/uploads/2022/10/heading-line.png');
+                    width: 282px;
+                    height: 8px;
+                    left: 125px;
+                    bottom: 0;
+                    margin-top: 10px;
+                    @include responsive(md){
+                        left: 80px;
+                    }
+                    @include responsive(sm){
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+
+            }
+            .text{
+                margin-top: 50px;
+                font-family: $libre;
+                font-weight: 400;
+                font-size: 18px;
+                color: $black;
+                line-height: 32px;
+                display: block;
+                @include responsive(md){
+                    font-size: 16px;
+                    margin-top: 40px;
+                }
+                @include responsive(sm){
+                    position: relative;
+                    z-index: 20;
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

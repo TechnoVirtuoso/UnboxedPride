@@ -1,0 +1,421 @@
+.top-bar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2001;
+    background-color: $purple;
+    height: 40px;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    transition: top .3s ease;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    @media (max-width:576px) {
+        display: flex;
+    }
+    .login{
+        display: block;
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        text-decoration: none;
+        font-family: $libre;
+        font-weight: 500;
+        .icon-lock{
+            width: 0.875em;
+        }
+    }
+}
+.main-header{
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: #fff;
+    width: calc(100% - 80px);
+    @media (max-width:991px) {
+        padding: 0 20px;
+        width: calc(100% - 40px);
+    }
+    @media (max-width:576px) {
+        top: 41px;
+    }
+
+    .wrap-header{
+        // max-width: $container;
+        margin: 0 auto;
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            .logo-wrap{
+                flex: 0 0 20%;
+                @media (max-width:14440px) {
+                    flex: 0 0 15%;
+                }
+                @media (max-width:576px) {
+                    flex: 0 0 40%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+        .menu-wrap{
+                display: flex;
+                flex: 0 0 80%;
+                justify-content: space-between;
+                @media (max-width:14440px) {
+                    flex: 0 0 85%;
+                }
+                @media (max-width:1260px) {
+                    display: none;
+                }
+            .menu-items{
+                display: flex;
+                .item-list{
+                    padding: 18px;
+                    position: relative;
+                    @media (max-width:1420px) {
+                        padding: 14px;
+                    }
+                    &:hover{
+                        .item{
+                            color: $purple;
+                        }
+                    }
+                    .item{
+                        text-decoration: none;
+                        display: block;
+                        font-size: 15px;
+                        color: $black;
+                        font-family: $libre;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: all .2s ease-in;
+                        @media (max-width:1420px) {
+                            font-size: 13px;
+                        }
+                        // &:hover{
+                        //     color: $purple;
+                        // }
+                        svg{
+                            margin-left: 5px;
+                            transition: all .15s ease-in;
+                        }
+                        &.active{
+                            svg{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    .sub-menu-wrap{
+                        position: absolute;
+                        z-index: 2;
+                        background: white;
+                        width: 200px;
+                        padding: 20px 0;
+                        border-radius: 0 0 30px 30px;
+                        box-shadow: 0px 0px 20px rgba(166, 153, 245, 0.2);
+                        left: 50%;
+                        top: 100%;
+                        transform: translateX(-50%);
+                        display: none;
+                        flex-direction: column;
+                        .sub-menu-item{
+                            margin-top: 10px;
+                            padding: 5px 10px;
+                            text-align: center;
+                            a{
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000000;
+                                font-family: $libre;
+                                font-weight: 500;
+                                text-decoration: none;
+                                display: block;
+                                transition: all .2s ease-in;
+
+                                &:hover{
+                                    color: $purple;
+                                }
+                            }
+                        }
+                        @media (min-width:1260px) {
+                            &.mega-menu{
+                                width: 800px;
+                                grid-template-rows: 1fr 1fr 1fr 1fr;
+                                grid-auto-flow: column;
+                                padding: 20px;
+                                // flex-direction: row;
+                                // flex-wrap: wrap;
+                                left: 0;
+                                transform: translateX(0);
+                                .sub-menu-item{
+                                    width: 100%;
+
+                                }
+                            }
+                        }
+
+                    }
+                    // &.dropdown{
+                    //     &:hover{
+                    //         .sub-menu-wrap{
+                    //             display: block;
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+            .wrap-buttons{
+                display: flex;
+            }
+                .book-now-btn{
+                    display: flex;
+                    position: relative;
+                    flex-direction: column;
+                    justify-content: center;
+                    &:hover{
+                        .shadow{
+                            opacity: 0;
+                        }
+                    }
+                    .shadow{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        opacity: 0.5;
+                        filter: blur(25px);
+                        z-index: 1;
+                        transition: all .3s ease-in;
+                    }
+                    .book-appoinment{
+                        font-family: $libre;
+                        font-weight: 600;
+                        z-index: 2;
+                        font-size: 13px;
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        padding: 10px 26px;
+                        color: #000000;
+                        background-color: $white;
+                        border: 2px solid;
+                        border-image-slice: 1;
+                        border-width: 2px;
+                        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        // @media (max-width:1440px) {
+                        //     padding: 10px 36px;
+                        // }
+                    }
+                    &.login{
+                        margin-left: 25px;
+                        .shadow{
+                            background: linear-gradient(315deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        }
+                        .book-appoinment{
+                            border-image-source: linear-gradient(315deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        }
+                    }
+                }
+            }
+            .wrap-mobile-menu{
+                display: flex;
+                align-items: center;
+                .login-btn{
+                    display: none;
+                    position: relative;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-right: 25px;
+                    @media (max-width:1260px) {
+                        display: block;
+                    }
+                    @media (max-width:576px) {
+                        display: none;
+                    }
+                    &:hover{
+                        .shadow{
+                            opacity: 0;
+                        }
+                    }
+                    .shadow{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        opacity: 0.5;
+                        filter: blur(25px);
+                        z-index: 1;
+                        transition: all .3s ease-in;
+                    }
+                    .login{
+                        font-family: $libre;
+                        font-weight: 600;
+                        z-index: 2;
+                        font-size: 14px;
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        padding: 10px 46px;
+                        color: #000000;
+                        background-color: $white;
+                        border: 2px solid;
+                        border-image-slice: 1;
+                        border-width: 2px;
+                        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        @media (max-width:1440px) {
+                            padding: 10px 36px;
+                        }
+                    }
+                }
+                .hamburger-menu-icon{
+                    @media (min-width:1261px) {
+                         display: none;
+                    }
+
+                    .close-icon{
+                        display: none;
+                    }
+                    .hamburger-icon{
+                        svg{
+                            height: 25px;
+                        }
+                    }
+                    &.active{
+                        .close-icon{
+                            display: block;
+                            svg{
+                                height: 25px;
+                            }
+                        }
+                        .hamburger-icon{
+                            display: none;
+                        }
+                    }
+                 }
+            }
+
+        }
+        .mobile-navigation{
+            position: fixed;
+            height: calc(100vh - 60px);
+            background: #fff;
+            right: -100%;
+            top: 70px;
+            width: auto;
+            z-index: 1000;
+            transition: all .7s ease;
+            padding: 40px 30px 0 12px;
+            @media (max-width:576px) {
+                top: 100px;
+            }
+            &.active{
+                right: 0;
+                overflow: scroll;
+            }
+            .mobile-menu{
+                .menu-items{
+                    .item-list{
+                        padding: 18px;
+                        .item{
+                            text-decoration: none;
+                            display: block;
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: $black;
+                            font-family: $libre;
+                            font-weight: 500;
+                            cursor: pointer;
+                            svg{
+                                margin-left: 5px;
+                                transition: all .3s ease-in;
+                            }
+                            &.active{
+                                svg{
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                        .sub-menu-wrap{
+                            z-index: 2;
+                            width: 100%;
+                            padding: 20px 0;
+                            display: none;
+                            .sub-menu-item{
+                                margin-top: 10px;
+                                padding: 5px 10px;
+                                padding-right: 0;
+                                a{
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    color: #000000;
+                                    font-family: $libre;
+                                    font-weight: 400;
+                                    text-decoration: none;
+                                    display: block;
+                                    &:hover{
+                                        color: $purple;
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+            .book-now-btn{
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
+                width: 200px;
+                margin-left: 18px;
+                margin-top: 10px;
+                .shadow{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                    opacity: 0.5;
+                    filter: blur(25px);
+                    z-index: 1;
+                }
+                .book-appoinment{
+                    font-family: $libre;
+                    font-weight: bold;
+                    z-index: 2;
+                    font-size: 12px;
+                    text-align: center;
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+                    padding: 10px 0px;
+                    color: #000000;
+                    background-color: $white;
+                    border: 2px solid;
+                    border-image-slice: 1;
+                    border-width: 2px;
+                    border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+
+                }
+                @media (max-width:576px) {
+                    display: none;
+                }
+                &.book{
+                    display: none;
+                    @media (max-width:576px) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

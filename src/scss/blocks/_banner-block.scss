@@ -1,0 +1,332 @@
+.banner-block{
+    background-color: #FFFFFF;
+    height: 780px;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @media (max-width:1200px) {
+        height: 550px;
+        // background-color: $purple;
+        // border-radius: 0px 0px 50px 50px;
+        // padding-bottom: 40px;
+    }
+    @media (max-width:991px) {
+        padding: 0 20px;
+    }
+    @media (max-width:767px) {
+        height: 725px;
+        background-image: url(/wp-content/uploads/2022/12/mobile-banner.png) !important;
+    }
+    @media (max-width:576px) {
+        margin-top: 40px;
+    }
+
+
+    .wrap-container-block{
+        display: flex;
+        height: 100%;
+        max-width: 1560px;
+        margin: 0 auto;
+        @media (max-width:767px) {
+            flex-wrap: wrap;
+        }
+        .text-box{
+            flex: 0 0 50%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 9;
+            @media (max-width:991px) {
+                flex: 0 0 60%;
+            }
+            @media (max-width:767px) {
+                flex: 100%;
+                background-color: transparent;
+                height: 100%;
+            }
+            .content-block{
+                @media (max-width:767px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 100%;
+                    justify-content: space-between;
+                }
+                @media (max-width:420px) {
+
+                  justify-content: space-around;
+                  margin-top: 30px;
+                }
+                .heading{
+                    font-family: $libre;
+                    font-weight: 400;
+                    font-size: 46px;
+                    margin-bottom: 40px;
+                    // text-transform: capitalize;
+                    color: #FFFFFF;
+                    position: relative;
+                    display: inline;
+
+                    @media (max-width:1200px) {
+                        font-size: 26px;
+                    }
+                    @media (max-width:767px) {
+                        text-align: center;
+                        margin: 20px 0;
+                    }
+
+                    @media (max-width:767px) {
+                        font-size: 22px;
+                        line-height: 26px;
+                    }
+                    span{
+                        color: $yellow;
+                        font-size: 50px;
+
+                    }
+                    p{
+                        margin-bottom: 10px;
+                        display: contents;
+                        @media (max-width:1400px) {
+                            display: inline;
+                        }
+                    }
+                    &:after{
+                        position: absolute;
+                        content: '';
+                        background: url(/wp-content/uploads/2022/10/heading-line.png);
+                        width: 100%;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 8px;
+                        right: 0px;
+                        bottom: 0;
+                        top: 101%;
+                        @media (max-width:767px) {
+                            display: none;
+                        }
+                    }
+                }
+                .wrap-bottom-text{
+                    @media (max-width:767px) {
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        margin-bottom: 20px;
+                    }
+                    @media (max-width:420px) {
+
+                        margin-bottom: 60px;
+                    }
+
+                }
+                .gif-mobile{
+                        display: none;
+                        position: relative;
+                        @media (max-width:767px) {
+                           display: flex;
+                                .gif-mobile{
+                                    width: 100%;
+                                }
+                               .gif_layer_mobile{
+                                display: none;
+                                    &.active{
+                                        position: absolute;
+                                        display: block;
+                                        left: 0;
+                                        width: 100%;
+                                    }
+                               }
+                        }
+                        @media (max-width:460px) {
+                            width: 100%;
+                        }
+                }
+
+                .text{
+                    font-family: $libre;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 36px;
+                    color: #FFFFFF;
+                    padding-top: 0px;
+                    margin-top: 80px;
+                    margin-bottom: 40px;
+                    @media (max-width:1240px) {
+                        margin-top: 50px;
+                        margin-bottom: 0;
+                    }
+                    @media (max-width:767px) {
+                        margin-top: 0;
+                    }
+                    @media (max-width:576px) {
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
+                    @media (max-width:420px) {
+                       font-size: 16px;
+                       margin-top: 20px;
+                    }
+                    span{
+
+                        @media (max-width:1500px) {
+                            color: $yellow;
+                            font-size: 70px;
+                        }
+                    }
+                }
+                .book-now-btn{
+                    display: inline-flex;
+                    position: relative;
+                    margin-top: 40px;
+                    // max-width: 89%;
+
+                    @media (max-width:1220px) {
+                        margin-bottom: 30px;
+                    }
+                    @media (max-width:767px) {
+                       justify-content: center;
+                       display: inline-block;
+                    }
+                    &:hover{
+                        .shadow{
+                            opacity: 0;
+                        }
+                    }
+                    .shadow{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        opacity: 0.5;
+                        filter: blur(25px);
+                        z-index: 1;
+                        transition: all .3s ease-in;
+                    }
+                    .book-appoinment{
+                        font-family: $libre;
+                        font-weight: 600;
+                        z-index: 2;
+                        position: relative;
+                        width: auto;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 14px;
+                        padding: 12px 35px;
+                        color: #000000;
+                        background-color: $white;
+                        border: 2px solid;
+                        border-image-slice: 1;
+                        border-width: 2px;
+                        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                        @media (max-width:1220px) {
+                           width: auto;
+                        }
+                    }
+                }
+                .sub-heading{
+                    font-size: 28px;
+                    font-weight: 700;
+                    font-family: $libre;
+                    color: #FFFFFF;
+                    text-transform: capitalize;
+                    display: none;
+                    // @media (min-width:1240px) {
+                    //     display: none;
+                    // }
+                    @media (max-width:767px) {
+                        display: none;
+                    }
+                    .dot{
+                        color: $yellow;
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+        .gif-box{
+            flex: 0 0 50%;
+            display: flex;
+            align-items: center;
+            // position: relative;
+            @media (max-width:991px) {
+                flex: 0 0 40%;
+            }
+            @media (max-width:767px) {
+               display: none;
+            }
+            .photo-pc{
+                width: 100%;
+                @media (max-width:767px) {
+                  display: none;
+                 }
+            }
+            .gif-pc{
+                position: absolute;
+                left: 0%;
+                width: 100%;
+                // height: 700px;
+                @media (max-width:1240px) {
+                    display: none;
+                }
+
+            }
+            .gif_layer_2{
+                display: none;
+                position: absolute;
+                left: 0%;
+                width: 100%;
+                // height: 701px;
+                &.active{
+                    display: block;
+                    @media (max-width:1240px) {
+                        display: none;
+                    }
+                }
+            }
+            .gif_layer_line{
+                // display: none;
+                position: absolute;
+                left: 0%;
+                width: 100%;
+                // height: 701px;
+                    @media (max-width:1240px) {
+                        display: none;
+                    }
+
+            }
+            .gif-tablet{
+                display: none;
+                @media (max-width:1240px) {
+                    display: block;
+                    position: absolute;
+                    left: 0%;
+                    width: 100%;
+                }
+            }
+            .gif_layer_tablet{
+                display: none;
+                @media (max-width:1240px) {
+
+                    position: absolute;
+                    left: 0%;
+                    width: 100%;
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+        #text-animation{
+            position: absolute;
+            inset: 0;
+            @media (max-width:1240px) {
+                display: none;
+            }
+        }
+        }
+    }
+}

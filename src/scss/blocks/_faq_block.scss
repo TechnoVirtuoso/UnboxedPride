@@ -1,0 +1,161 @@
+.faq-block{
+    .wrap-faq-block{
+        margin-top: 100px;
+        margin-bottom: 150px;
+        padding: 0 40px;
+        @media (max-width:991px) {
+            margin-bottom: 75px;
+            margin-top: 50px;
+            padding: 0 20px;
+         }
+        .container{
+            max-width: $container;
+            margin: 0 auto;
+            .content-block{
+                display: flex;
+                flex-wrap: wrap;
+
+                .heading-box{
+                    flex: 0 0 40%;
+                    @media (max-width:991px) {
+                        flex: 100%;
+                     }
+                     .wrap-heading{
+                        max-width: 440px;
+                        .main-heading{
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 60px;
+                            color: $black;
+                            position: relative;
+                            display: inline;
+                            text-transform: capitalize;
+                            margin-bottom: 40px;
+                            @media (max-width:991px) {
+                               display: initial;
+                               font-size: 50px;
+                             }
+                            span{
+                                color: $yellow;
+                                margin-left: 5px;
+                                font-size: 50px;
+                                position: absolute;
+                                @media (max-width:991px) {
+                                   bottom: 5px;
+                                 }
+                                 &.purple{
+                                    color: $purple;
+                                 }
+                            }
+
+                            &:after{
+                                top: 100%;
+                                position: absolute;
+                                content: '';
+                                background: url('/wp-content/uploads/2022/10/yellow-line.png');
+                                width: 95%;
+                                height: 8px;
+                                right: 0px;
+                                bottom: 0;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            &.purple{
+                                &:after{
+                                    background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                }
+                            }
+                        }
+                     }
+
+                    @include arrow-button;
+                }
+                .accordion-box{
+                    flex: 0 0 60%;
+                    @media (max-width:991px) {
+                       flex: 100%;
+                       margin-top: 50px;
+                     }
+                    .accordion{
+                        margin-bottom: 30px;
+                        .accordion-head{
+                            cursor: pointer;
+                            box-shadow: 0px 15px 50px rgba(166, 153, 245, 0.15);
+                            background: #FFFFFF;
+                            position: relative;
+                            /* Border */
+                            border: 2px solid transparent;
+                            border-radius: 50px;
+                            background:
+                                linear-gradient(to right, white, white),
+                                linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                            background-clip: padding-box, border-box;
+                            background-origin: padding-box, border-box;
+
+                                .heading{
+                                    font-family: $libre;
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    color: $purple;
+                                    padding: 20px;
+                                    @media (max-width:576px) {
+                                      font-size: 12px;
+                                      padding: 10px 15px;
+                                      padding-right: 25px;
+                                     }
+                                }
+                            .icon{
+                                background-image: url(/wp-content/uploads/2022/10/plus.png);
+                                position: absolute;
+                                right: 25px;
+                                background-size: contain;
+                                width: 15px;
+                                height: 15px;
+                                top: 50%;
+                                background-repeat: no-repeat;
+                                transform: translateY(-50%);
+                                @media (max-width:767px) {
+                                    right: 15px;
+                                }
+
+                            }
+                            &.active{
+                                .icon{
+                                background-image: url(/wp-content/uploads/2022/10/minus.png);
+                                }
+                            }
+                        }
+                        .accordion-body{
+                             /* Border */
+                             box-shadow: 0px 15px 50px rgba(166, 153, 245, 0.15);
+                             border: 2px solid transparent;
+                             border-radius: 0 0 25px 25px;
+                             background:
+                                 linear-gradient(to right, white, white),
+                                linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                             background-clip: padding-box, border-box;
+                             background-origin: padding-box, border-box;
+                            border-top: 0;
+                            margin: 0 17px;
+                            display: none;
+                            .text{
+                                padding: 10px 20px;
+                                font-family: $libre;
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: $black;
+                                line-height: 30px;
+                                @media (max-width:576px) {
+                                  font-size: 13px;
+                                 }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

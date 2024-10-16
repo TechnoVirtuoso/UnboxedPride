@@ -1,0 +1,138 @@
+.career-join-boxed-section{
+    margin: 150px 0;
+    @media (max-width:1440px) {
+        margin-top: 100px;
+    }
+    .wrap-join-boxed{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+
+        padding: 0 40px;
+        @media (max-width:991px) {
+            background-size: cover;
+            padding: 0 20px;
+            // z-index: 0;
+        }
+        .bg_image{
+            position: absolute;
+            z-index: -1;
+        }
+        .container{
+            max-width: 1440px;
+            margin: 0 auto;
+            .column{
+                display: flex;
+                flex-wrap: wrap;
+                @media (max-width:1200px) {
+                    margin-left: 20px;
+                }
+                .inner-column{
+                    flex: 0 0 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    @media (max-width:991px) {
+                        flex: 100%;
+                    }
+                    .heading-content{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+                        @media (max-width:991px) {
+                            margin-bottom: 70px;
+                        }
+                        .sub-heading{
+                            font-family: $libre;
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $purple;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+                        }
+                        .heading{
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 80px;
+                            color: $black;
+                            position: relative;
+                            display: inline;
+                            text-transform: capitalize;
+                            line-height: 90px;
+                            max-width: 450px;
+                            @media (max-width:767px) {
+                                font-size: 60px;
+                            }
+                            @media (max-width:576px) {
+                                font-size: 40px;
+                                line-height: normal;
+                            }
+                            @media (max-width:480px) {
+                                font-size: 32px;
+                            }
+
+                            span{
+                                color: $purple;
+                                margin-left: 5px;
+                                font-size: 70px;
+                                position: absolute;
+                                bottom: 5%;
+                                @media (max-width:576px) {
+                                    bottom: 0;
+                                    font-size: 50px;
+                                }
+                            }
+                            &:after{
+                                top: 100%;
+                                position: absolute;
+                                content: '';
+                                background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                width: 100%;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                height: 8px;
+                                right: 100px;
+                                bottom: 0;
+                                @media (max-width:576px) {
+                                    right: 0;
+                                }
+                                @media (max-width:400px) {
+                                    width: 50%;
+                                    right: 180px;
+                                }
+                            }
+                        }
+
+                    }
+                    .text{
+                        font-family: $libre;
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: #000;
+                        line-height: 30px;
+                        // margin-top: 60px;
+                        @media (max-width:767px) {
+                            font-size: 16px;
+                        }
+                        ul{
+                            li{
+                                margin-bottom: 20px;
+                                &:nth-last-child(1){
+                                    margin-bottom: 0;
+                                }
+                                &::marker{
+                                    color: $purple;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include apply-button;
+        }
+    }
+}

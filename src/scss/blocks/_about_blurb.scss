@@ -1,0 +1,139 @@
+.about-blurb{
+    padding: 0 40px;
+    position: relative;
+    @include responsive(sm){
+        padding: 0 20px;
+    }
+    .container{
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 50px 0 150px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include responsive(lg){
+            padding: 50px 0 100px;
+        }
+        @include responsive(md){
+            padding: 50px 0 80px;
+        }
+        @include responsive(sm){
+            flex-direction: column;
+            padding-bottom: 25px;
+        }
+        &:before {
+            content: "";
+            width: 50%;
+            height: 300px;
+            left: 0;
+            position: absolute;
+            top: 40%;
+            margin-top: 10px;
+            transform: translateY(-50%);
+            background: linear-gradient(90deg, #FFFC76 -18.09%, rgba(255, 252, 118, 0) 57.63%);
+            @include responsive(lg){
+                margin-top: 20px;
+                height: 320px;
+            }
+            @include responsive(sm){
+                content: "";
+                width: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                transform: none;
+                margin: 0px;
+            }
+        }
+        .content-wrap{
+            width: 45%;
+            z-index: 20;
+            @include responsive(sm){
+                width: 100%;
+                margin-bottom: 80px;
+            }
+            h2{
+                font-family: $libre;
+                font-weight: bold;
+                font-size: 55px;
+                color: $black;
+                position: relative;
+                display: inline;
+                text-transform: capitalize;
+                @include responsive(md){
+                    font-size: 40px;
+                }
+                @include responsive(sm){
+                    font-size: 35px;
+                }
+                span{
+                    color: $purple;
+                    margin-left: 5px;
+                    font-size: 70px;
+                    position: absolute;
+                    top: 40%;
+                    transform: translateY(-60%);
+                }
+            }
+            .text{
+                margin-top: 40px;
+                display: block;
+                font-family: $libre;
+                font-weight: 400;
+                font-size: 18px;
+                color: $black;
+                line-height: 32px;
+                @include responsive(md){
+                    font-size: 16px;
+                    margin-top: 30px;
+                }
+                p{
+                    margin-bottom: 40px;
+                    @include responsive(md){
+                        margin-bottom: 30px;
+                    }
+                    br{
+                        @include responsive(lg){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .img-wrap{
+            width: 50%;
+            position: relative;
+            @include responsive(sm){
+                width: 100%;
+            }
+            &.active-imgline{
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 205px;
+                    width: 2px;
+                    background: black;
+                    @include responsive(lg){
+                        height: 155px;
+                    }
+                    @include responsive(md){
+                        height: 135px;
+                    }
+                    @include responsive(sm){
+                        display: none;
+                    }
+                }
+            }
+            img{
+                width: 100%;
+                display: block;
+                box-shadow: 0px 0px 50px rgba(166, 153, 245, 0.8);
+                border-radius: 30px;
+            }
+        }
+    }
+}

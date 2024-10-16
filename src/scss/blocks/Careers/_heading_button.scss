@@ -1,0 +1,130 @@
+.career-heading-button-section{
+    margin-bottom: 150px;
+    margin-top: 100px;
+    @media (max-width:1440px) {
+        margin-top: 75px;
+    }
+    .wrap-heading-button{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 0 40px;
+        @media (max-width:991px) {
+            background-size: cover;
+            padding: 0 20px;
+            // z-index: 0;
+        }
+        .container{
+            max-width: 1440px;
+            margin: 0 auto;
+            .column{
+                display: flex;
+                flex-wrap: wrap;
+                @media (max-width:1200px) {
+                    // margin-left: 20px;
+                }
+                .inner-column{
+                    flex: 0 0 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    @media (max-width:991px) {
+                        flex: 100%;
+                    }
+                    .heading-content{
+                        max-width: 560px;
+                        padding-right: 40px;
+                        @media (max-width:991px) {
+                            margin-bottom: 70px;
+                        }
+                        @media (max-width:540px) {
+                            padding-right: 0;
+                        }
+
+                        .sub-heading{
+                            font-family: $libre;
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $purple;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+                        }
+                        .heading{
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 40px;
+                            color: $black;
+                            position: relative;
+                            display: inline;
+                            text-transform: capitalize;
+                            line-height: 67px;
+                            @media (max-width:576px) {
+                                font-size: 30px;
+                                line-height: 40px;
+                            }
+                            @media (max-width:430px) {
+                                font-size: 24px;
+                            }
+                            @media (max-width:340px) {
+                                font-size: 20px;
+                            }
+                            span{
+                                color: $purple;
+                                margin-left: 5px;
+                                vertical-align: text-bottom;
+                                font-size: 60px;
+                                @media (max-width:767px) {
+                                    font-size: 50px;
+                                }
+                            }
+                            &:after{
+                                top: 100%;
+                                position: absolute;
+                                content: '';
+                                background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                width: 282px;
+                                height: 8px;
+                                right: 0px;
+                                bottom: 0;
+                            }
+                        }
+                        .text{
+                            font-family: $libre;
+                            font-weight: 400;
+                            font-size: 18px;
+                            color: #000;
+                            line-height: 30px;
+                            margin-top: 50px;
+                            @media (max-width:767px) {
+                                font-size: 16px;
+                            }
+
+                        }
+
+                    }
+                    .text{
+                        font-family: $libre;
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: #000;
+                        line-height: 30px;
+                        // margin-top: 60px;
+                        @media (max-width:767px) {
+                            font-size: 16px;
+                        }
+                        ul{
+                            li{
+                                &::marker{
+                                    color: $purple;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include apply-button;
+        }
+    }
+}

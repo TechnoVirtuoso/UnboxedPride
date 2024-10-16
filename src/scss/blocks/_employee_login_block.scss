@@ -1,0 +1,124 @@
+.employee-login-block{
+    // margin: 50px 0;
+    .wrap-employee-block{
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 20px;
+        .wrap-top-content{
+            display: flex;
+            align-items: center;
+            @media (max-width:420px) {
+                display: block;
+            }
+            .content-block{
+                margin-top: 50px;
+                padding-right: 20px;
+                @media (max-width:400px) {
+                 padding-right: 0;
+                }
+            }
+            .main-heading{
+                font-family: $libre;
+                font-weight: bold;
+                font-size: 28px;
+                color: $black;
+                position: relative;
+                text-transform: capitalize;
+                margin-bottom: 20px;
+                @media (max-width:500px) {
+                    font-size: 20px;
+                }
+            }
+            .main-text{
+                font-family: $libre;
+                font-weight: 400;
+                font-size: 22px;
+                color: $black;
+                position: relative;
+                text-transform: capitalize;
+                @media (max-width:500px) {
+                    font-size: 16px;
+                }
+            }
+            .discount-image{
+                img{
+                    @media (max-width:576px) {
+                        width: 120px;
+                    }
+                    @media (max-width:420px) {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        .wrap-two-sides-block{
+            display: flex;
+            // flex-wrap: wrap;
+            margin-top: 40px;
+            padding-right: 50px;
+            justify-content: space-between;
+            @media (max-width:767px) {
+                flex-wrap: wrap;
+                padding-right: 0;
+            }
+            .left-block,.right-block{
+                // background-color: #d8f7f0;
+                padding: 40px;
+                flex:0 0 40%;
+                display: flex;
+                align-items: center;
+                @media (max-width:767px) {
+                    flex: 0 0 100%;
+                    flex-basis: calc(100% - 80px);
+                }
+                @media (max-width:400px) {
+                    padding: 20px;
+                    flex-basis: calc(100% - 40px);
+                }
+                .left-block-wrap,.right-block-wrap{
+                    background-color: #d8f7f0;
+                    padding: 40px;
+                    .heading{
+                        font-family: $libre;
+                        font-size: 24px;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        text-align: center;
+                    }
+                    .text{
+                        font-size: 22px;
+                        font-family: $libre;
+                        font-weight: 400;
+                        margin: 40px 0;
+                        @media (max-width:500px) {
+                            font-size: 18px;
+                        }
+                    }
+                    .btn-wrap{
+                        text-align: center;
+                        .button{
+                            background-color: #4495fa;
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 16px;
+                            color: #ffffff;
+                            text-decoration: none;
+                            display: inline-block;
+                            padding: 10px 20px;
+                            border-radius: 25px;
+                            @media (max-width:400px) {
+                                font-size: 14px;
+                                padding: 10px 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-block{
+                .right-block-wrap{
+                    background-color: #F8EF85;
+                }   
+            }
+        }
+    }   
+}

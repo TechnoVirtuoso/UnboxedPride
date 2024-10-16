@@ -1,0 +1,168 @@
+.mental-health-block{
+    .wrap-mental-block{
+        padding: 0 40px;
+        @media (max-width:991px) {
+            padding: 0 20px;
+        }
+        .container{
+            max-width: $container;
+            margin: 0 auto;
+            .content-block{
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 100px;
+                padding-bottom: 200px;
+                @media (max-width:1024px) {
+                    padding: 75px 0;
+                 }
+
+                .inner-left{
+                    flex: 0 0 50%;
+                    @media (max-width:1220px) {
+                        flex: 0 0 100%;
+                    }
+                    .content{
+                        max-width: 90%;
+                        @media (max-width:1220px) {
+                            max-width: 100%;
+                        }
+                        .heading{
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 36px;
+                            color: $black;
+                            position: relative;
+                            display: inline;
+                            text-transform: capitalize;
+                            @media (max-width:1345px) {
+                                font-size: 33px;
+                            }
+                            @media (max-width:991px) {
+                            font-size: 30px;
+                            }
+                            @media (max-width:576px) {
+                            font-size: 22px;
+                            }
+                            @media (max-width:400px) {
+                                font-size: 20px;
+                            }
+                            @media (max-width:376px) {
+                            font-size: 16px;
+                            }
+                            span{
+                                color: $purple;
+                                margin-left: 5px;
+                                font-size: 70px;
+                                position: absolute;
+                                bottom: 40px;
+                                @media (max-width:1220px) {
+                                    position: inherit;
+                                    line-height: 0;
+                                    bottom: 5px;
+                                }
+                                @media (max-width:576px) {
+                                    font-size: 40px;
+                                    bottom: 0;
+                                    margin-left: 0;
+                                    }
+                            }
+                            &:after{
+                                top: 105%;
+                                position: absolute;
+                                content: '';
+                                background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                width: 100%;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                height: 8px;
+                                right: 0px;
+                                bottom: 0;
+                            }
+
+
+                        }
+                        .text{
+                            margin-top: 90px;
+                            font-family: $libre;
+                            font-weight: 400;
+                            font-size: 17px;
+                            color: $black;
+                            line-height: 32px;
+                            padding-right: 55px;
+                            @media (max-width:767px) {
+                                font-size: 16px;
+                            }
+                            p{
+                                margin-bottom: 0
+                            }
+                            @media (max-width:1220px) {
+                                margin-top: 50px;
+                            }
+                            @media (max-width:576px) {
+                                padding-right: 0;
+                            }
+                        }
+                        @include arrow-button;
+                    }
+                }
+                .inner-right{
+                    flex: 0 0 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    @media (max-width:1220px) {
+                        flex: 0 0 100%;
+                        margin-top: 30px;
+                    }
+                    .icon-box{
+                        flex: 0 0 50%;
+                        padding-right: 50px;
+                        flex-basis: calc(50% - 50px);
+                        @media (max-width:500px) {
+                            margin: 20px;
+
+                        }
+                        &:nth-child(2n+2){
+                            margin-top: 33px;
+                            @media (max-width:500px) {
+                                margin-top: 0;
+                            }
+                        }
+                        .img-wrap{
+                            height: 100px;
+                            margin-bottom: 10px;
+                        }
+                        .heading{
+                            font-family: $libre;
+                            font-weight: 600;
+                            font-size: 20px;
+                            color: $black;
+                            text-transform: capitalize;
+                        }
+                        .text{
+                            margin-top: 10px;
+                            font-family: $libre;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: $black;
+                            line-height: 20px;
+                        }
+                        &:nth-last-child(1){
+                            padding-right: 44px;
+                            flex-basis: calc(50% - 44px);
+                            @media (max-width:500px) {
+                                flex: 0 0 100%;
+                            }
+                        }
+                        @media (max-width:500px) {
+                           padding-right: 20px;
+                           flex-basis: calc(50% - 20px);
+                           flex: 0 0 100%;
+                           margin-left: 0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+.multi-blurbs{
+    padding: 0 30px;
+    @include responsive(xl){
+        padding: 0 40px;
+    }
+    @include responsive(sm){
+        padding: 0 20px;
+    }
+    .container{
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 200px 0;
+        @include responsive(lg){
+            padding: 150px 0;
+        }
+        @include responsive(md){
+            padding: 80px 0;
+        }
+        @include responsive(md){
+            padding: 50px 0;
+        }
+        .blurbs-wrap{
+            position: relative;
+            &::before {
+                content: "";
+                width: 2px;
+                height: 56%;
+                top: 100px;
+                left: 45%;
+                transform: translateX(-50%);
+                background: #a699f5;
+                position: absolute;
+                margin-left: -6px;
+                @include responsive(xl){
+                    display: none;
+                }
+            }
+            .blurb-item{
+                &:last-child{
+                    margin: 0px;
+                }
+                &.revert{
+                    flex-direction: row-reverse;
+                    .content-wrap{
+                        .heading{
+                            &:before{
+                                content: "";
+                                background: black;
+                                position: absolute;
+                                width: 31.5%;
+                                height: 2px;
+                                top: 50%;
+                                right: 100%;
+                                margin-right: 5px;
+                                @include responsive(xl){
+                                    display: none;
+                                }
+                            }
+                            span{
+                                color: $yellow;
+                            }
+                            &:after{
+                                background: url('/wp-content/uploads/2022/10/yellow-line.png');
+                            }
+                        }
+                    }
+                }
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 200px;
+                justify-content: space-between;
+                @include responsive(lg){
+                    margin-bottom: 150px;
+                }
+                @include responsive(md){
+                    margin-bottom: 80px;
+                }
+                .content-wrap{
+                    width: 45%;
+                    @include responsive(lg){
+                        width: 50%;
+                    }
+                    @include responsive(md){
+                        width: 100%;
+                        margin-bottom: 80px;
+                    }
+                    .heading{
+                        font-family: $libre;
+                        font-weight: bold;
+                        font-size: 37px;
+                        color: $black;
+                        position: relative;
+                        display: inline;
+                        text-transform: capitalize;
+                        @include responsive(md){
+                            font-size: 35px;
+                        }
+                        @include responsive(sm){
+                            font-size: 30px;
+                        }
+                        span{
+                            color: $purple;
+                            margin-left: 5px;
+                            font-size: 70px;
+                            position: absolute;
+                            bottom: 0;
+                        }
+                        &:after{
+                            top: 100%;
+                            position: absolute;
+                            content: '';
+                            background: url('/wp-content/uploads/2022/10/heading-line.png');
+                            width: 282px;
+                            height: 8px;
+                            right: 0px;
+                            bottom: 0;
+                            margin-top: 5px;
+                            @include responsive(lg){
+                                width: 100%;
+                                background-repeat: no-repeat !important;
+                                background-size: cover !important;
+                            }
+                        }
+
+                    }
+                    .text{
+                        margin-top: 50px;
+                        font-family: $libre;
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: $black;
+                        line-height: 32px;
+                        display: block;
+                        @include responsive(md){
+                            font-size: 16px;
+                            margin-top: 30px;
+                        }
+                        p{
+                            margin-bottom: 30px;
+                            &:last-child{
+                                margin: 0px;
+                            }
+                        }
+                    }
+                    @include arrow-button;
+                }
+                .img-wrap{
+                    width: 45%;
+                    @include responsive(md){
+                        width: 100%;
+                    }
+                    img{
+                        width: 95%;
+                        display: block;
+                        @include responsive(xl){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

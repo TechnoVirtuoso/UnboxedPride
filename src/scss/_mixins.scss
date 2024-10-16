@@ -1,0 +1,307 @@
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+
+@mixin center(){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin middle-button {
+  .wrap-btn{
+    text-align: center;
+    margin-top: 50px;
+    &.hide{
+      display: none;
+    }
+}
+  .btn-wrap{
+    display: inline-flex;
+    position: relative;
+    width: 300px;
+    @media (max-width:576px) {
+      width: auto;
+    }
+    &:hover{
+        .shadow{
+            opacity: 0;
+        }
+    }
+    .shadow{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        opacity: 0.5;
+        filter: blur(25px);
+        z-index: 1;
+        transition: all .3s ease-in;
+    }
+    .button{
+        justify-content: space-between;
+        align-items: center;
+        font-family: $libre;
+        font-weight: 600;
+        z-index: 2;
+        width: 100%;
+        position: relative;
+        text-transform: capitalize;
+        text-align: center;
+        text-decoration: none;
+        padding: 13px 35px;
+        color: #000000;
+        background-color: $white;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        @media (max-width:576px) {
+          font-size: 14px;
+         }
+
+    }
+  }
+}
+@mixin post-button {
+  .btn-wrap{
+    display: inline-flex;
+    position: relative;
+    width: fit-content;
+    margin-top: 20px;
+
+    &:hover{
+        .shadow{
+            opacity: 0;
+        }
+    }
+    .shadow{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+      opacity: 0.5;
+      filter: blur(25px);
+      z-index: 1;
+      transition: all .3s ease-in;
+  }
+    .button{
+        justify-content: space-between;
+        align-items: center;
+        font-family: $libre;
+        font-weight: 600;
+        z-index: 2;
+        width: 100%;
+        position: relative;
+        text-transform: capitalize;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px 36px;
+        color: #000000;
+        background-color: $white;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        @media (max-width:576px) {
+          font-size: 14px;
+         }
+
+    }
+  }
+}
+@mixin arrow-btn {
+  .btn-wrap{
+    display: inline-flex;
+    position: relative;
+    width: 300px;
+    @media (max-width:1220px) {
+     margin-top: 50px;
+  }
+  @media (max-width:576px) {
+    width: auto;
+   }
+  &:hover{
+      .shadow{
+          opacity: 0;
+      }
+  }
+    .shadow{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        opacity: 0.5;
+        filter: blur(25px);
+        z-index: 1;
+        transition: all .3s ease-in;
+    }
+    .button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $libre;
+        font-weight: 600;
+        z-index: 2;
+        width: 100%;
+        position: relative;
+        text-transform: capitalize;
+        text-align: center;
+        text-decoration: none;
+        padding: 13px 35px;
+        color: #000000;
+        background-color: $white;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        @media (max-width:576px) {
+          font-size: 14px;
+         }
+        .arrow{
+            display: flex;
+            @media (max-width:576px) {
+              margin-left: 15px;
+              svg{
+                width: 75%;
+              }
+            }
+        }
+    }
+}
+}
+@mixin arrow-button {
+  .btn-wrap{
+    display: inline-flex;
+    position: relative;
+    margin-top: 80px;
+    width: 300px;
+    @media (max-width:1220px) {
+     margin-top: 50px;
+  }
+  @media (max-width:576px) {
+    width: auto;
+  }
+
+  &:hover{
+      .shadow{
+          opacity: 0;
+      }
+  }
+    .shadow{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        opacity: 0.5;
+        filter: blur(25px);
+        z-index: 1;
+        transition: all .3s ease-in;
+    }
+    .button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $libre;
+        font-weight: 600;
+        z-index: 2;
+        width: 100%;
+        position: relative;
+        text-transform: capitalize;
+        text-align: center;
+        text-decoration: none;
+        padding: 13px 35px;
+        color: #000000;
+        background-color: $white;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        @media (max-width:576px) {
+          font-size: 14px;
+         }
+        .arrow{
+            display: flex;
+            @media (max-width:576px) {
+              margin-left: 15px;
+              svg{
+                width: 75%;
+              }
+            }
+        }
+    }
+}
+}
+@mixin apply-button {
+  .btn-wrap{
+    display: inline-flex;
+    position: relative;
+    width: 300px;
+    @media (max-width:1220px) {
+     margin-top: 50px;
+  }
+  @media (max-width:576px) {
+    width: fit-content;
+  }
+  &:hover{
+      .shadow{
+          opacity: 0;
+      }
+  }
+    .shadow{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        opacity: 0.5;
+        filter: blur(25px);
+        z-index: 1;
+        transition: all .3s ease-in;
+    }
+    .button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $libre;
+        font-weight: 600;
+        z-index: 2;
+        width: 100%;
+        position: relative;
+        text-transform: capitalize;
+        text-align: center;
+        text-decoration: none;
+        padding: 13px 35px;
+        color: #000000;
+        background-color: $white;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+        @media (max-width:576px) {
+         font-size: 14px;
+        }
+        .arrow{
+            display: flex;
+            @media (max-width:576px) {
+              margin-left: 15px;
+              svg{
+                width: 75%;
+              }
+            }
+        }
+    }
+}
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+

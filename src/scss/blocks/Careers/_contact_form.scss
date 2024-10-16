@@ -1,0 +1,314 @@
+.contact-form-section{
+    margin-bottom: 150px;
+    margin-top: 100px;
+    @media (max-width:1440px) {
+        margin-top: 75px;
+    }
+    .wrap-contact-form{
+        position: relative;
+        // z-index: -1;
+        padding: 0 40px;
+        @media (max-width:991px) {
+            background-size: cover;
+            padding: 0 20px;
+        }
+        .container{
+            max-width: 1440px;
+            margin: 0 auto;
+
+            position: relative;
+            .bg_image{
+                position: absolute;
+                z-index: -1;
+            }
+            .column{
+                display: flex;
+                flex-wrap: wrap;
+                @media (max-width:1200px) {
+                    margin-left: 20px;
+                }
+                @media (max-width:991px) {
+                    margin-left: 0px;
+                }
+                .inner-column{
+                    flex: 0 0 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    @media (max-width:991px) {
+                        flex: 100%;
+                    }
+                    .heading-content{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+                        .sub-heading{
+                            font-family: $libre;
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $purple;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+                        }
+                        .heading{
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 75px;
+                            color: $black;
+                            position: relative;
+                            display: inline;
+                            text-transform: capitalize;
+                            line-height: 90px;
+                            max-width: 450px;
+                            @media (max-width:767px) {
+                                font-size: 60px;
+                            }
+                            @media (max-width:576px) {
+                                font-size: 40px;
+                                line-height: normal;
+                            }
+                            @media (max-width:420px) {
+                                font-size: 32px;
+                            }
+                            span{
+                                color: $purple;
+                                margin-left: 5px;
+                                font-size: 70px;
+                                position: absolute;
+                                bottom: 5%;
+                                @media (max-width:420px) {
+                                  bottom: 0;
+                                }
+                            }
+                            &:after{
+                                top: 100%;
+                                position: absolute;
+                                content: '';
+                                background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                width: 100%;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                height: 8px;
+                                right: 145px;
+                                bottom: 0;
+                                @media (max-width:576px) {
+                                    right: 0;
+                                }
+                            }
+                        }
+                        .btn-wrap{
+                            display: inline-flex;
+                            position: relative;
+                            width: 300px;
+                            @media (max-width:1220px) {
+                             margin-top: 50px;
+                          }
+                            @media (max-width:991px) {
+                             display: none;
+                          }
+
+                          &:hover{
+                              .shadow{
+                                  opacity: 0;
+                              }
+                          }
+                            .shadow{
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                                opacity: 0.5;
+                                filter: blur(25px);
+                                z-index: 1;
+                                transition: all .3s ease-in;
+                            }
+                            .button{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-family: $libre;
+                                font-weight: 600;
+                                z-index: 2;
+                                width: 100%;
+                                position: relative;
+                                text-transform: capitalize;
+                                text-align: center;
+                                text-decoration: none;
+                                padding: 13px 35px;
+                                color: #000000;
+                                background-color: $white;
+                                border: 2px solid;
+                                border-image-slice: 1;
+                                border-width: 2px;
+                                border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                                @media (max-width:576px) {
+                                 font-size: 14px;
+                                }
+                                .arrow{
+                                    display: flex;
+                                    @media (max-width:576px) {
+                                      margin-left: 15px;
+                                      svg{
+                                        width: 75%;
+                                      }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .text{
+                        font-family: $libre;
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: #000;
+                        line-height: 30px;
+                        width: 100%;
+                        @media (max-width:991px) {
+                            margin-top: 50px;
+                        }
+                        @media (max-width:767px) {
+                            font-size: 16px;
+                        }
+                        ul{
+                            li{
+                                margin-bottom: 20px;
+                                &:nth-last-child(1){
+                                    margin-bottom: 0;
+                                }
+                                &::marker{
+                                    color: $purple;
+                                }
+                            }
+                        }
+                        .gravity-theme{
+                            background: #FFFFFF;
+                            border-radius: 22px;
+                            padding: 50px 30px;
+                            box-shadow: 0px 0px 50px rgba(166, 153, 245, 0.25);
+                            @media (max-width:991px) {
+                                // margin: 0 20px;
+                            }
+                            form{
+                                .gform-body{
+                                    .gform_fields{
+                                        grid-column-gap: 9%;
+                                        -ms-grid-columns: (1fr 9%);
+                                        grid-row-gap: 30px;
+                                        .gfield{
+                                            .gfield_label{
+                                                font-family: $libre;
+                                                font-weight: 400;
+                                                font-size: 20px;
+                                                text-transform: capitalize;
+                                                letter-spacing: 0.1em;
+                                            }
+                                            .ginput_container{
+                                                input,textarea{
+                                                    border: 0;
+                                                    border-bottom: 3px solid #A699F5;
+                                                    resize: none;
+                                                    &::placeholder{
+                                                        font-size: 20px;
+                                                        font-family: $libre;
+                                                        font-weight: 500;
+                                                        color: #000;
+                                                        text-transform: capitalize;
+                                                    }
+                                                }
+                                                .gfield_checkbox{
+                                                    .gchoice{
+                                                        label{
+                                                            font-family: $libre;
+                                                            font-weight: 400;
+                                                            font-size: 16px;
+                                                            letter-spacing: 0.1em;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .gform_footer{
+                                   position: relative;
+                                   padding:0;
+                                   .gform_button{
+                                    position: absolute;
+                                    top: 10px;
+                                    opacity: 0;
+                                   }
+                                }
+                            }
+                        }
+                    }
+                    .btn-wrap{
+
+                        position: relative;
+                        width: 300px;
+                        display: none;
+                        @media (max-width:991px) {
+                            display: inline-flex;
+                            margin-top: 50px;
+                        }
+                      @media (max-width:576px) {
+                        width: fit-content;
+                      }
+                      &:hover{
+                          .shadow{
+                              opacity: 0;
+                          }
+                      }
+                        .shadow{
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                            opacity: 0.5;
+                            filter: blur(25px);
+                            z-index: 1;
+                            transition: all .3s ease-in;
+                        }
+                        .button{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            font-family: $libre;
+                            font-weight: 600;
+                            z-index: 2;
+                            width: 100%;
+                            position: relative;
+                            text-transform: capitalize;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 13px 35px;
+                            color: #000000;
+                            background-color: $white;
+                            border: 2px solid;
+                            border-image-slice: 1;
+                            border-width: 2px;
+                            border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                            @media (max-width:576px) {
+                             font-size: 14px;
+                            }
+                            .arrow{
+                                display: flex;
+                                @media (max-width:576px) {
+                                  margin-left: 15px;
+                                  svg{
+                                    width: 75%;
+                                  }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+        }
+    }
+}

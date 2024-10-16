@@ -1,0 +1,153 @@
+.area-experience-block{
+    margin-top: 75px;
+    @media (max-width:767px) {
+        margin-top: 50px;
+    }
+    .wrap-experience-block{
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, #FFFEC1 30%, #FFFEC1 100%, rgba(255, 255, 255, 0) 100%);
+        padding: 0 40px;
+        @media (max-width:767px) {
+            background: transparent;
+        }
+       .wrap-container{
+        max-width: $container;
+        margin: 0 auto;
+            .container{
+                display: flex;
+                @media (max-width:991px) {
+                    flex-wrap: wrap;
+                }
+                .text-block{
+                    flex: 0 0 50%;
+                    display: flex;
+                    align-items: flex-end;
+                    @media (max-width:991px) {
+                        flex: 100%;
+                    }
+                    .content-wrap{
+                        padding-right: 20px;
+                        .heading{
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 40px;
+                            color: $black;
+                            position: relative;
+                            display: inline;
+                            text-transform: capitalize;
+
+                            &:before{
+                                content: ".";
+                                position: absolute;
+                                left: 101%;
+                                color: $purple;
+                                line-height: 100%;
+                                font-size: 50px;
+                                bottom: 0px;
+                                @media (max-width:567px) {
+                                    font-size: 50px;
+                                    bottom: 0;
+                                }
+                            }
+                            &:after{
+                                top: 100%;
+                                position: absolute;
+                                content: '';
+                                background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                width: 100%;
+                                height: 8px;
+                                right: 0px;
+                                bottom: 0;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            @media (max-width:991px) {
+                                font-size: 40px;
+                            }
+                            @media (max-width:567px) {
+                                font-size: 26px;
+                            }
+                        }
+                        .text{
+                            margin-top: 30px;
+                            font-size: 18px;
+                            font-family: $libre;
+                            font-weight: 400;
+                            color: #000000;
+                            line-height: 30px;
+                            @media (max-width:767px) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                .image-block{
+                    flex: 0 0 50%;
+                    text-align: -webkit-center;
+                    @media (max-width:991px) {
+                        flex: 100%;
+                    }
+                    img{
+                        display: block;
+                        @media (max-width:1140px) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+            }
+            .button-wrap{
+                    .btn-wrap{
+                        display: inline-flex;
+                        position: relative;
+                        width: 300px;
+                        margin-bottom: 30px;
+                        @media (max-width:991px) {
+                            margin-top: 30px;
+                        }
+                        @media (max-width:767px) {
+                            margin-bottom: 0;
+                        }
+                      &:hover{
+                          .shadow{
+                              opacity: 0;
+                          }
+                      }
+                        .shadow{
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                            opacity: 0.5;
+                            filter: blur(25px);
+                            z-index: 1;
+                            transition: all .3s ease-in;
+                        }
+                        .button{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            font-family: $libre;
+                            font-weight: bold;
+                            z-index: 2;
+                            width: 100%;
+                            position: relative;
+                            text-transform: capitalize;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 13px 35px;
+                            color: #000000;
+                            background-color: $white;
+                            border: 2px solid;
+                            border-image-slice: 1;
+                            border-width: 2px;
+                            border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                            .arrow{
+                                display: flex;
+                            }
+                        }
+                    }
+
+            }
+        }
+    }
+}

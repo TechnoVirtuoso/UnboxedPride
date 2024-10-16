@@ -1,0 +1,95 @@
+.heading-text-block{
+    .wrap-heading-text{
+        margin-bottom: 100px;
+        .container{
+            max-width: 1440px;
+            margin: 0 auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+
+            padding: 0 40px;
+            @media (max-width:991px) {
+                padding: 0 20px;
+            }
+            .bg_image{
+                position: absolute;
+                z-index: -1;
+            }
+            .content-block{
+                text-align: center;
+                .wrap-heading{
+                    margin-bottom: 40px;
+                    .heading{
+                        font-family: $libre;
+                        font-weight: bold;
+                        font-size: 40px;
+                        color: $black;
+                        position: relative;
+                        display: inline;
+                        text-transform: capitalize;
+                        @media (max-width:676px) {
+                            font-size: 30px;
+                        }
+                        @media (max-width:420px) {
+                            font-size: 24px;
+                        }
+
+                        span{
+                            color: $yellow;
+                            margin-left: 5px;
+                            font-size: 50px;
+                            position: absolute;
+                            bottom: 5px;
+                            @media (max-width:991px) {
+                               bottom: 0px;
+                             }
+                             &.purple{
+                                color: $purple;
+                             }
+                        }
+                        &:after{
+                            top: 100%;
+                            position: absolute;
+                            content: '';
+                            background: url('/wp-content/uploads/2022/10/yellow-line.png');
+                            width: 95%;
+                            height: 8px;
+                            right: 0px;
+                            bottom: 0;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                        &.purple{
+                            &:after{
+                                background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+                .text{
+                    font-family: $libre;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #000000;
+                    line-height: 30px;
+                    @media (max-width:420px) {
+                        font-size: 16px;
+                    }
+                    p{
+                        margin-bottom: 40px;
+                    }
+                    a{
+                        color: #000;
+                    }
+                    strong{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

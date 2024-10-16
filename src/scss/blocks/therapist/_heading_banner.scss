@@ -1,0 +1,201 @@
+.therapist-banner-section{
+    // background-image: url('http://unboxed-pride.local/wp-content/uploads/2023/07/Frame-35759.png');
+    // position: relative;
+   
+    &.type_2{
+        .wrap-therapist-banner{
+            max-width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @media (max-width:$sm) {
+                background-image: none !important;
+                height: auto !important;
+                
+                
+            }
+            .container{
+                @media (max-width:$sm) {
+                   display: block;
+                   margin-top: 20px;
+                    height: auto;
+                }
+                .content-block{
+                    .wrap-heading{
+                        .heading{
+                            color: #FFF;
+                            text-align: center;
+                            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            font-family: $poppins;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            padding: 0px;
+                            @media (max-width : $lg) {
+                                font-size: 28px;
+                                
+                            }
+                            @media (max-width : $md) {
+                                font-size: 23px;
+                                
+                            }
+                            @media (max-width : $sm) {
+                                display: none;
+                                
+                            }
+                        }
+                    }
+                    .wrap_title{
+                        .title{
+                            color: #FFF;
+                            text-align: center;
+                            text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            font-family: $poppins;
+                            font-size: 22px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            position: relative;
+                            @media (max-width : $sm) {
+                                color: #1B1A1A;
+                                font-size: 20px;
+                                font-weight: 600;
+                                text-align: start;
+                                // width: 233px;
+                                
+                            }
+                            &::before{
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                background-image: url("/wp-content/uploads/2023/07/line.png");
+                                top: 26px;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                display: block;
+                                position: absolute;
+                                left: 157px;
+                                @media (max-width:$sm) {
+                                    // display: none;
+                                    background-image: url("/wp-content/uploads/2023/07/line.svg");
+                                    top: 36px;
+                                    left: 38px;
+                                    
+                                }
+                           }
+                        }
+                    }
+                    .line{
+                        display: none;
+                        @media (max-width:$sm) {
+                            display: block;
+                            
+                            
+                        }
+                        img{
+                            max-width: 142px;
+                            width: 100%;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .wrap-therapist-banner{
+        height: 370px;
+        // background-color: $purple;
+        position: relative;
+        border-radius: 0px 0px 50px 50px;
+        .container{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .content-block{
+                width: 100%;
+                text-align: center;
+                // padding: 0 40px;
+                @media (max-width:991px) {
+                    // padding: 0 20px;
+                }
+                .wrap-heading{
+                    display: inline-flex;
+                    justify-content: center;
+                    position: relative;
+                    margin-bottom: 20px;
+                    font-family: $libre;
+                    font-weight: bold;
+                    width: 100%;
+                    .heading{
+                        font-family: $libre;
+                        font-weight: bold;
+                        font-size: 60px;
+                        line-height: 70px;
+                        color: $white;
+                        display: inline-block;
+                        position: relative;
+                        @media (max-width:767px) {
+                            font-size: 40px;
+                            line-height: normal;
+                        }
+                        @media (max-width:576px) {
+                            font-size: 34px;
+                            br{
+                                display: none;
+                            }
+                        }
+                        @media (max-width:460px) {
+                            font-size: 26px;
+                            padding: 0 10px;
+                            br{
+                                display: none;
+                            }
+                        }
+
+                            // width: 13%;
+                            // &:before{
+                            //     content: "";
+                            //     // width: 27%;
+                            //     content: "";
+                            //     width: 100%;
+                            //     height: 2px;
+                            //     background: #fff;
+                            //     position: absolute;
+                            //     top: 25%;
+                            //     right: 100%;
+                            //     @media (max-width:1240px) {
+                            //         // width: 38%;
+                            //     }
+                            // }
+                            // &:after{
+                            //     content: "";
+                            //     // width: 27%;
+                            //     width: 100%;
+                            //     height: 2px;
+                            //     background: #fff;
+                            //     left: 104%;
+                            //     position: absolute;
+                            //     bottom: 25%;
+
+                            // }
+
+                    }
+
+                }
+                .text{
+                    font-family: $libre;
+                    font-weight: 400;
+                    font-size: 22px;
+                    color: $white;
+                    line-height: 30px;
+                    @media (max-width:991px) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

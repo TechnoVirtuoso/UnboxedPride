@@ -1,0 +1,214 @@
+.book-appoinment-block{
+    margin: 150px 0;
+    @media (max-width:1024px) {
+       margin-top: 75px;
+    }
+    .wrap-appoinment-block{
+        .container{
+            .back-to-page{
+                display: block;
+                max-width: 1650px;
+                padding-left: 40px;
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+                color: #000000;
+                font-family: $libre;
+                font-weight: 600;
+                font-size: 22px;
+                text-decoration: none;
+                margin-top: 20px;
+                margin-bottom: 15px;
+                @media (max-width:1024px) {
+                    padding-left: 10px;
+                 }
+                svg{
+                    margin-right: 10px;
+
+                }
+            }
+            .content-block{
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 1650px;
+                padding-left: 40px;
+                margin-left: auto;
+                @media (max-width:1024px) {
+                   padding-left: 0;
+                }
+                .heading-block{
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $yellow 0%, $yellow 88%, rgba(255, 255, 255, 0) 88%);
+                    flex: 0 0 33%;
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 20px;
+                    flex-basis: calc(33% - 40px);
+                    @media (max-width:1024px) {
+                        flex:100%;
+                        background: $yellow;
+                        padding: 50px;
+                    }
+                    .wrap-heading{
+                        margin-bottom: 80px;
+                        @media (max-width:1024px) {
+                           margin-bottom: 0;
+                        }
+                    }
+                    .heading{
+                        font-family: $libre;
+                        font-weight: bold;
+                        font-size: 4.2vw;
+                        color: $black;
+                        position: relative;
+                        display: inline;
+                        color: #000000;
+                        text-transform: capitalize;
+                        // margin-bottom: 40px;
+                        @media (max-width:1024px) {
+
+                          br{
+                            display: none;
+                          }
+                        }
+
+                        @media (max-width:991px) {
+                           display: initial;
+                           font-size: 50px;
+                         }
+                        @media (max-width:576px) {
+                           font-size: 38px;
+                         }
+                        span{
+                            color: $yellow;
+                            margin-left: 5px;
+                            font-size: 70px;
+                            position: absolute;
+                            @media (max-width:991px) {
+                               bottom: 5px;
+                               font-size: 50px;
+                             }
+                             &.purple{
+                                color: $purple;
+                             }
+                        }
+
+                        &:after{
+                            top: 100%;
+                            position: absolute;
+                            content: '';
+                            background: url('/wp-content/uploads/2022/10/yellow-line.png');
+                            width: 95%;
+                            height: 8px;
+                            right: 0px;
+                            bottom: 0;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                        &.purple{
+                            &:after{
+                                background: url('/wp-content/uploads/2022/10/heading-line.png');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+                .text-block{
+                    flex: 0 0 67%;
+                    @media (max-width:1024px) {
+                        flex:100%;
+                    }
+                    .text-wrap{
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8%, $purple 8%, $purple 95%, rgba(255, 255, 255, 0) 95%);
+                        padding: 5px 0;
+                        display: flex;
+                        @media (max-width:1024px) {
+                            background: $purple;
+                        }
+                    .text{
+                        font-family: $libre;
+                        font-weight: 400;
+                        font-size: 17px;
+                        color: #000;
+                        line-height: 30px;
+                        position: relative;
+                        margin: 50px auto;
+                        max-width: 950px;
+                        padding: 0 25px;
+                        @media (max-width:1500px) {
+                            padding-left: 40px;
+                        }
+                        @media (max-width:767px) {
+                            font-size: 15px;
+                        }
+                        &:before{
+                            content: "";
+                            height: 2px;
+                            width: 230px;
+                            background-color: #FFFFFF;
+                            position: absolute;
+                            top: 15px;
+                            transform: translateY(-50%);
+                            right: 103%;
+                            @media (max-width:1024px) {
+                               content: none;
+                            }
+                        }
+                        ul{
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                    }
+                    .arrow-btn{
+                        max-width: 660px;
+                        margin: 0 auto;
+                        padding: 0 40px;
+                        @include arrow-btn;
+                    }
+
+                }
+                &.reverse{
+                    padding-right: 40px;
+                    flex-direction: row-reverse;
+                    padding-left: 0;
+                    margin-left: 0;
+                    @media (max-width:1024px) {
+                        padding-right: 0;
+                    }
+                    .heading-block{
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $purple 0%, $purple 88%, rgba(255, 255, 255, 0) 88%);
+                        justify-content: center;
+                        @media (max-width:1024px) {
+                            background: $purple;
+                        }
+                        .wrap-heading{
+                            .heading{
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                    .text-block{
+                        .text-wrap{
+                            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8%, $yellow 8%, $yellow 95%, rgba(255, 255, 255, 0) 95%);
+                            @media (max-width:1024px) {
+                                background: $yellow;
+                            }
+                            .text{
+                                &:before{
+                                    background-color: #000000;
+                                    left: 103%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

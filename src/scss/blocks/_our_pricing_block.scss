@@ -1,0 +1,210 @@
+.pricing-block{
+    .wrap-pricing-block{
+        margin-bottom: 100px;
+        padding: 0 40px;
+        @media (max-width:991px) {
+            margin-bottom: 50px;
+            padding: 0 20px;
+         }
+        .container{
+            max-width: $container;
+            margin: 0 auto;
+            .wrap-heading{
+                text-align: center;
+                .main-heading{
+                    font-family: $libre;
+                    font-weight: bold;
+                    font-size: 60px;
+                    color: $black;
+                    position: relative;
+                    display: inline;
+                    text-transform: capitalize;
+                    @media (max-width:767px) {
+                        font-size: 45px;
+                    }
+                    span{
+                        color: $yellow;
+                        margin-left: 5px;
+                        font-size: 50px;
+                        position: absolute;
+                    }
+                    &:after{
+                        top: 110%;
+                        position: absolute;
+                        content: '';
+                        background: url('/wp-content/uploads/2022/10/yellow-line.png');
+                        width: 260px;
+                        height: 8px;
+                        right: 0px;
+                        bottom: 0;
+                    }
+                }
+            }
+            .content-block{
+                margin-top: 100px;
+                display: flex;
+                .left-session-row{
+                    flex: 0 0 20%;
+                    @media (max-width:1220px) {
+                        display: none;
+                    }
+                    .session-title{
+                        flex: 0 0 20%;
+                        box-shadow: 0px 15px 50px rgba(166, 153, 245, 0.15);
+                        font-family: $libre;
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: $purple;
+                        line-height: 29px;
+                        background: $white;
+                        height: 102px;
+                        width: 288px;
+
+                        .span{
+                            max-width: 65%;
+                            height: 100%;
+                            display: flex;
+                            margin: 0 auto;
+                            align-items: center;
+                            @media (max-width:1220px) {
+                                max-width: 100%;
+                                padding: 10px;
+                            }
+                        }
+                        &.empty{
+                            opacity: 0;
+                        }
+                    }
+                }
+                .title-row{
+                    display: flex;
+                    .empty{
+                        flex: 0 0 20%;
+                    }
+
+                }
+                .pricing-row{
+                    display: flex;
+                    flex: 0 0 80%;
+                    @media (max-width:1220px) {
+                        flex: 0 0 100%;
+                    }
+                    @media (max-width:876px) {
+                        flex-wrap: wrap;
+                    }
+                    .wrap-table-price{
+                        display: flex;
+                        flex: 0 0 25%;
+                        flex-direction: column;
+                        @media (max-width:1440px) {
+                            flex: 0 0 25%;
+                        }
+                        @media (max-width:876px) {
+                            margin-bottom: 40px;
+                            flex: 0 0 50%;
+                        }
+                        @media(max-width:567px){
+                            flex: 0 0 100%;
+                        }
+                        .pricing-title{
+                            flex: 0 0 20%;
+                            background: #A699F5;
+                            border-radius: 9px 9px 0px 0px;
+                            color: $white;
+                            text-transform: capitalize;
+                            font-family: $libre;
+                            font-weight: 600;
+                            font-size: 16px;
+                            padding: 40px 10px;
+                            text-align: center;
+                            margin: 0 20px;
+                            flex-basis: calc(20% - 100px);
+                            @media (max-width:1440px) {
+                                padding: 40px 0px;
+                                margin: 0 8px;
+                            }
+                            @media (max-width:767px) {
+                               font-size: 12px;
+                               padding: 30px 10px;
+                            }
+                        }
+                    .price-box{
+                        flex: 0 0 20%;
+                        color: $black;
+                        text-transform: capitalize;
+                        font-family: $libre;
+                        font-weight: 500;
+                        font-size: 20px;
+                        text-align: center;
+                        padding: 40px 0px;
+                        margin: 0 20px;
+                        flex-basis: calc(20% - 100px);
+                        box-shadow: 0px 15px 50px rgba(166, 153, 245, 0.15);
+                        height: 102px;
+                        @media (max-width:1440px) {
+                            margin: 0 8px;
+                        }
+                        @media (max-width:767px) {
+                            padding: 30px 5px;
+                            background-color:#fff;
+                        }
+                        .session-title-mob{
+                            display: none;
+                            @media (max-width:1220px) {
+                                display: block;
+                                font-family: $libre;
+                                font-weight: 600;
+                                font-size: 11px;
+                                color: $purple;
+                                margin-top: 10px;
+                            }
+                            @media (max-width:767px) {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+
+                }
+                }
+            }
+            @include middle-button;
+
+        }
+    }
+}
+
+
+
+.page-id-1447{
+    .pricing-block{
+        .wrap-pricing-block{
+            .container{
+                max-width: 1150px;
+                .wrap-heading{
+                    text-align: left;
+                    .main-heading{
+                        font-size: 40px;
+                        &:after{
+                            content: none;
+                        }
+                    }
+                }
+                .content-block{
+                    .left-session-row{
+                        .session-title{
+                            font-size: 14px;
+                            height: 100px;
+                        }
+                    }
+                    .pricing-row{
+                        .wrap-table-price{
+                            .pricing-title{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

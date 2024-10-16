@@ -1,0 +1,168 @@
+.how-it-works-block{
+    .wrap-how-it-works{
+        margin-bottom: 200px;
+        padding: 0 40px;
+        @media (max-width:1024px) {
+            margin-bottom: 100px;
+         }
+         @media (max-width:991px) {
+            padding: 0 20px;
+        }
+        .container{
+            max-width: $container;
+            margin: 0 auto;
+            .main-heading{
+                text-align: center;
+                .heading{
+                    font-family: $libre;
+                    font-weight: bold;
+                    font-size: 60px;
+                    color: $black;
+                    position: relative;
+                    display: inline;
+                    text-transform: capitalize;
+                    span{
+                        color: $yellow;
+                        margin-left: 5px;
+                        font-size: 50px;
+                        position: absolute;
+                    }
+                    &:after{
+                        top: 100%;
+                        position: absolute;
+                        content: '';
+                        background: url('/wp-content/uploads/2022/10/yellow-line.png');
+                        width: 200px;
+                        height: 8px;
+                        right: 0px;
+                        bottom: 0;
+                    }
+                }
+            }
+            .content-block{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 50px;
+                justify-content: space-between;
+                background-repeat: no-repeat;
+                background-position: 100% 0%;
+                @media (max-width:1280px) {
+                    background-image: none !important;
+                 }
+
+                .icon-box{
+                    flex: 0 0 22%;
+                    text-align: center;
+                    @media (max-width:1120px) {
+                       flex: 50%;
+                       margin: 20px;
+                       flex-basis: calc(50% - 40px);
+                     }
+
+                    &:nth-child(2n+2){
+                        margin-top: 90px;
+                        @media (max-width:1120px) {
+                            margin-top: 20px;
+                          }
+                    }
+                    .wrap-img-count{
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        .count{
+                            font-family: $libre;
+                            font-weight: bold;
+                            font-size: 35px;
+                            color: $black;
+                            top: 15%;
+                            position: absolute;
+                            right:0;
+                            z-index: -1;
+                            &:before{
+                                content: "";
+                                width: 100px;
+                                height: 2px;
+                                background: $purple;
+                                position: absolute;
+                                right: 120%;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                         }
+                         .img-wrap{
+                            margin-bottom: 30px;
+                            .wrap-json-animation{
+                                display: block;
+                                .main{
+                                    box-shadow: 0px 4px 20px rgba(166, 153, 245, 0.25);
+                                    border-radius: 50%;
+                                }
+                            }
+                         }
+                    }
+
+                    .heading{
+                        font-family: $libre;
+                        font-weight: 600;
+                        font-size: 24px;
+                        color: $purple;
+                    }
+                    .text{
+                        margin-top: 10px;
+                        font-family: $libre;
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: $black;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .wrap-btn{
+                text-align: center;
+                margin-top: 50px;
+            }
+              .btn-wrap{
+                display: inline-flex;
+                position: relative;
+                width: auto;
+                &:hover{
+                    .shadow{
+                        opacity: 0;
+                    }
+                }
+                .shadow{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                    opacity: 0.5;
+                    filter: blur(25px);
+                    z-index: 1;
+                    transition: all .3s ease-in;
+                }
+                .button{
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: $libre;
+                    font-weight: 600;
+                    z-index: 2;
+                    width: 100%;
+                    position: relative;
+                    text-transform: capitalize;
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 13px 35px;
+                    color: #000000;
+                    background-color: $white;
+                    border: 2px solid;
+                    border-image-slice: 1;
+                    border-width: 2px;
+                    border-image-source: linear-gradient(127.25deg, #33F6F0 0%, #A546A2 63.59%, #F3C458 145.64%, #303FC0 242.04%, #D64774 307.68%, #9925AE 393.83%);
+                    @media (max-width:576px) {
+                        font-size: 13px;
+                       }
+                }
+              }
+        }
+    }
+}

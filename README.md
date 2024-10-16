@@ -1,1 +1,1 @@
-# UnboxedPride
+# Unboxed pride watcher template
